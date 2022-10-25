@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2022/10/25/Daylight/</loc>
+    <loc>http://example.com/2022/10/25/diary221025/</loc>
     
     <lastmod>2022-10-25</lastmod>
     
@@ -27,6 +27,13 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>http://example.com/tags/Moods/</loc>
+    <lastmod>2022-10-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
 
   
