@@ -4074,7 +4074,7 @@ h1.page-title + .tag-cloud-list {
   text-align: center;
 }
 #pagination .page-number.current {
-  background: #00c4b6;
+  background: #002727;
   color: var(--white);
 }
 #pagination .pagination-info {
