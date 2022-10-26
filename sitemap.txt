@@ -1,3 +1,4 @@
+http://example.com/2022/10/26/Karma/
 http://example.com/2022/10/25/hello-world/
 http://example.com/2022/10/25/diary221025/
 http://example.com/
