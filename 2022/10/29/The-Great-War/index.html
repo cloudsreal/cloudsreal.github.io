@@ -1,151 +1,37 @@
-<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>The Great War | Cloudsreal's Blogs</title><meta name="author" content="Cloudsreal"><meta name="copyright" content="Cloudsreal"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="The Great War暂时不想和没听过《The Great War》的人说话本来对歌词意象的理解只是朦朦胧胧，随意的查阅了几个词后，对泰勒女士产生了由衷的敬意。  My knuckles were bruised like violetsSucker punching wallsCursed you as I sleep talkedSpineless in my tomb of silenc">
-<meta property="og:type" content="article">
-<meta property="og:title" content="The Great War">
-<meta property="og:url" content="http://example.com/2022/10/29/The-Great-War/index.html">
-<meta property="og:site_name" content="Cloudsreal&#39;s Blogs">
-<meta property="og:description" content="The Great War暂时不想和没听过《The Great War》的人说话本来对歌词意象的理解只是朦朦胧胧，随意的查阅了几个词后，对泰勒女士产生了由衷的敬意。  My knuckles were bruised like violetsSucker punching wallsCursed you as I sleep talkedSpineless in my tomb of silenc">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://example.com/images/thegreatwar.jpg">
-<meta property="article:published_time" content="2022-10-29T07:01:06.000Z">
-<meta property="article:modified_time" content="2023-01-03T05:10:09.137Z">
-<meta property="article:author" content="Cloudsreal">
-<meta property="article:tag" content="Moods">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/images/thegreatwar.jpg"><link rel="shortcut icon" href="/img/icon.jpg"><link rel="canonical" href="http://example.com/2022/10/29/The-Great-War/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
-  root: '/',
-  algolia: undefined,
-  localSearch: undefined,
-  translate: undefined,
-  noticeOutdate: undefined,
-  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
-  copy: {
-    success: 'Copy successfully',
-    error: 'Copy error',
-    noSupport: 'The browser does not support'
-  },
-  relativeDate: {
-    homepage: false,
-    post: false
-  },
-  runtime: '',
-  date_suffix: {
-    just: 'Just',
-    min: 'minutes ago',
-    hour: 'hours ago',
-    day: 'days ago',
-    month: 'months ago'
-  },
-  copyright: undefined,
-  lightbox: 'fancybox',
-  Snackbar: undefined,
-  source: {
-    justifiedGallery: {
-      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
-      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
-    }
-  },
-  isPhotoFigcaption: false,
-  islazyload: false,
-  isAnchor: false
-}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: 'The Great War',
-  isPost: true,
-  isHome: false,
-  isHighlightShrink: false,
-  isToc: true,
-  postUpdate: '2023-01-03 13:10:09'
-}</script><noscript><style type="text/css">
-  #nav {
-    opacity: 1
-  }
-  .justified-gallery img {
-    opacity: 1
-  }
+{% extends '_layout.swig' %}
+{% import '_macro/post.swig' as post_template %}
+{% import '_macro/sidebar.swig' as sidebar_template %}
 
-  #recent-posts time,
-  #post-meta time {
-    display: inline !important
-  }
-</style></noscript><script>(win=>{
-    win.saveToLocal = {
-      set: function setWithExpiry(key, value, ttl) {
-        if (ttl === 0) return
-        const now = new Date()
-        const expiryDay = ttl * 86400000
-        const item = {
-          value: value,
-          expiry: now.getTime() + expiryDay,
-        }
-        localStorage.setItem(key, JSON.stringify(item))
-      },
 
-      get: function getWithExpiry(key) {
-        const itemStr = localStorage.getItem(key)
+{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
 
-        if (!itemStr) {
-          return undefined
-        }
-        const item = JSON.parse(itemStr)
-        const now = new Date()
+{% block page_class %}page-post-detail{% endblock %}
 
-        if (now.getTime() > item.expiry) {
-          localStorage.removeItem(key)
-          return undefined
-        }
-        return item.value
-      }
-    }
-  
-    win.getScript = url => new Promise((resolve, reject) => {
-      const script = document.createElement('script')
-      script.src = url
-      script.async = true
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    })
-  
-      win.activateDarkMode = function () {
-        document.documentElement.setAttribute('data-theme', 'dark')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
-        }
-      }
-      win.activateLightMode = function () {
-        document.documentElement.setAttribute('data-theme', 'light')
-        if (document.querySelector('meta[name="theme-color"]') !== null) {
-          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
-        }
-      }
-      const t = saveToLocal.get('theme')
-    
-          if (t === 'dark') activateDarkMode()
-          else if (t === 'light') activateLightMode()
-        
-      const asideStatus = saveToLocal.get('aside-status')
-      if (asideStatus !== undefined) {
-        if (asideStatus === 'hide') {
-          document.documentElement.classList.add('hide-aside')
-        } else {
-          document.documentElement.classList.remove('hide-aside')
-        }
-      }
-    
-    const detectApple = () => {
-      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
-        document.documentElement.classList.add('apple')
-      }
-    }
-    detectApple()
-    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Cloudsreal's Blogs" type="application/atom+xml">
-</head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/egg.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('/images/thegreatwar.jpg')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Cloudsreal's Blogs</a></span><div id="menus"><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">The Great War</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-10-29T07:01:06.000Z" title="Created 2022-10-29 15:01:06">2022-10-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-01-03T05:10:09.137Z" title="Updated 2023-01-03 13:10:09">2023-01-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="The Great War"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h2 id="The-Great-War"><a href="#The-Great-War" class="headerlink" title="The Great War"></a>The Great War</h2><h3 id="暂时不想和没听过《The-Great-War》的人说话"><a href="#暂时不想和没听过《The-Great-War》的人说话" class="headerlink" title="暂时不想和没听过《The Great War》的人说话"></a>暂时不想和没听过《The Great War》的人说话</h3><p>本来对歌词意象的理解只是朦朦胧胧，随意的查阅了几个词后，对泰勒女士产生了由衷的敬意。</p>
-<blockquote>
-<p>My knuckles were bruised like violets<br>Sucker punching walls<br>Cursed you as I sleep talked<br>Spineless in my tomb of silence</p>
-</blockquote>
-<p>Tore your banners down<br>Took the battle underground<br>And maybe it was egos swinging<br>Maybe it was her<br>Flashes of the battle come back to me in a blur<br>All that bloodshed<br>Crimson clover<br>Uh-huh sweet dream was over<br>My hand was the one you reached for<br>All throughout the Great War<br>Always remember uh-huh<br>Tears on the letter I vowed<br>Not to cry anymore<br>If we survived the Great War<br>You drew up some good faith treaties<br>I drew curtains closed<br>Drank my poison all alone<br>You said I have to trust more freely<br>But diesel is desire<br>You were playing with fire<br>And maybe it’s the past that’s talking<br>Screaming from the crypt<br>Telling me to punish you for things you never did<br>So I justified it<br>All that bloodshed crimson clover<br>Uh-huh the bombs were closer<br>My hand was the one you reached for<br>All throughout the Great War<br>Always remember uh-huh<br>The burning embers I vowed<br>Not to fight anymore<br>If we survived the Great War<br>Uh-huh uh-huh<br>It turned into something bigger<br>Somewhere in the haze<br>Got a sense I’d been betrayed<br>Your finger on my hairpin triggers<br>Soldier down on that icy ground<br>Looked up at me with honor and truth<br>Broken and blue<br>So I called off the troops<br>That was the night I nearly lost you<br>I really thought I’d lost you<br>We can plant a memory garden<br>Say a solemn prayer<br>Place a poppy in my hair<br>There’s no morning glory<br>It was war it wasn’t fair<br>And we will never go back to that<br>Bloodshed crimson clover<br>Uh-huh the worst was over<br>My hand was the one you reached for<br>All throughout the Great War<br>Always remember uh-huh<br>We’re burned for better I vowed<br>I would always be yours<br>‘Cause we survived the Great War<br>Uh-huh uh-huh<br>I will always be yours<br>‘Cause we survived the Great War<br>Uh-huh<br>I vowed I will always be yours [1]</p>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="http://example.com">Cloudsreal</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://example.com/2022/10/29/The-Great-War/">http://example.com/2022/10/29/The-Great-War/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Moods/">Moods</a></div><div class="post_share"><div class="social-share" data-image="/images/thegreatwar.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/12/24/data-structure-review/"><img class="prev-cover" src="/images/sort.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">数据结构复习</div></div></a></div><div class="next-post pull-right"><a href="/2022/10/26/Karma/"><img class="next-cover" src="/images/karma.JPG" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Karma</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>Related Articles</span></div><div class="relatedPosts-list"><div><a href="/2022/10/26/Karma/" title="Karma"><img class="cover" src="/images/karma.JPG" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-26</div><div class="title">Karma</div></div></a></div><div><a href="/2022/10/25/diary221025/" title="我和我的形式主义"><img class="cover" src="/images/goodnight.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2022-10-25</div><div class="title">我和我的形式主义</div></div></a></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/egg.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Cloudsreal</div><div class="author-info__description">Full of uncertainty</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">5</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">2</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content">Cloudsreal's Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#The-Great-War"><span class="toc-number">1.</span> <span class="toc-text">The Great War</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9A%82%E6%97%B6%E4%B8%8D%E6%83%B3%E5%92%8C%E6%B2%A1%E5%90%AC%E8%BF%87%E3%80%8AThe-Great-War%E3%80%8B%E7%9A%84%E4%BA%BA%E8%AF%B4%E8%AF%9D"><span class="toc-number">1.1.</span> <span class="toc-text">暂时不想和没听过《The Great War》的人说话</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/01/02/%E4%BA%92%E8%81%94%E7%BD%91%E5%AE%9E%E9%AA%8C/" title="互联网实验"><img src="/images/ACLexample.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="互联网实验"/></a><div class="content"><a class="title" href="/2023/01/02/%E4%BA%92%E8%81%94%E7%BD%91%E5%AE%9E%E9%AA%8C/" title="互联网实验">互联网实验</a><time datetime="2023-01-02T06:50:32.000Z" title="Created 2023-01-02 14:50:32">2023-01-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/12/24/data-structure-review/" title="数据结构复习"><img src="/images/sort.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数据结构复习"/></a><div class="content"><a class="title" href="/2022/12/24/data-structure-review/" title="数据结构复习">数据结构复习</a><time datetime="2022-12-24T09:34:58.000Z" title="Created 2022-12-24 17:34:58">2022-12-24</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/29/The-Great-War/" title="The Great War"><img src="/images/thegreatwar.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="The Great War"/></a><div class="content"><a class="title" href="/2022/10/29/The-Great-War/" title="The Great War">The Great War</a><time datetime="2022-10-29T07:01:06.000Z" title="Created 2022-10-29 15:01:06">2022-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/26/Karma/" title="Karma"><img src="/images/karma.JPG" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Karma"/></a><div class="content"><a class="title" href="/2022/10/26/Karma/" title="Karma">Karma</a><time datetime="2022-10-26T01:28:07.000Z" title="Created 2022-10-26 09:28:07">2022-10-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/25/diary221025/" title="我和我的形式主义"><img src="/images/goodnight.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="我和我的形式主义"/></a><div class="content"><a class="title" href="/2022/10/25/diary221025/" title="我和我的形式主义">我和我的形式主义</a><time datetime="2022-10-25T02:21:11.000Z" title="Created 2022-10-25 10:21:11">2022-10-25</time></div></div></div></div></div></div></main><footer id="footer" style="background-image: url('/img/background.JPG')"><div id="footer-wrap"><div class="copyright">&copy;2022 - 2023 By Cloudsreal</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+{% block content %}
+
+  <div id="posts" class="posts-expand">
+    {{ post_template.render(page) }}
+
+    <div class="post-spread">
+      {% if theme.jiathis %}
+        {% include '_partials/share/jiathis.swig' %}
+      {% elseif theme.baidushare %}
+        {% include '_partials/share/baidushare.swig' %}
+      {% elseif theme.add_this_id %}
+        {% include '_partials/share/add-this.swig' %}
+      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
+        {% include '_partials/share/duoshuo_share.swig' %}
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block sidebar %}
+  {{ sidebar_template.render(true) }}
+{% endblock %}
+
+{% block script_extra %}
+  {% include '_scripts/pages/post-details.swig' %}
+{% endblock %}
