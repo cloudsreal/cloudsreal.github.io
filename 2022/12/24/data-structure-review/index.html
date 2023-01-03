@@ -1,37 +1,703 @@
-{% extends '_layout.swig' %}
-{% import '_macro/post.swig' as post_template %}
-{% import '_macro/sidebar.swig' as sidebar_template %}
 
 
-{% block title %}{{ page.title }} | {{ config.title }}{% endblock %}
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
 
-{% block page_class %}page-post-detail{% endblock %}
 
 
-{% block content %}
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.jpg">
+  <link rel="icon" href="/img/fluid.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Cloudsreal">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="chapter11.1 数据结构定义1.2. 数据的逻辑结构和物理结构 数据的逻辑结构—–从用户视图看，是面向问题的。数据的物理结构—–从具体实现视图看，是面向计算机的。相关的操作及其实现。  1.3. 面向对象的概念（不重要） OO:object-oriented＝object＋class＋inherit＋communicate  1.4. 算法的概念 Input specified，Outpu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据结构复习">
+<meta property="og:url" content="http://example.com/2022/12/24/data-structure-review/index.html">
+<meta property="og:site_name" content="Cloudsreal&#39;s Blogs">
+<meta property="og:description" content="chapter11.1 数据结构定义1.2. 数据的逻辑结构和物理结构 数据的逻辑结构—–从用户视图看，是面向问题的。数据的物理结构—–从具体实现视图看，是面向计算机的。相关的操作及其实现。  1.3. 面向对象的概念（不重要） OO:object-oriented＝object＋class＋inherit＋communicate  1.4. 算法的概念 Input specified，Outpu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/images/sort.png">
+<meta property="article:published_time" content="2022-12-24T09:34:58.000Z">
+<meta property="article:modified_time" content="2023-01-03T13:51:26.075Z">
+<meta property="article:author" content="Cloudsreal">
+<meta property="article:tag" content="2022秋季学期">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/images/sort.png">
+  
+  
+  
+  <title>数据结构复习 - Cloudsreal&#39;s Blogs</title>
 
-  <div id="posts" class="posts-expand">
-    {{ post_template.render(page) }}
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
-    <div class="post-spread">
-      {% if theme.jiathis %}
-        {% include '_partials/share/jiathis.swig' %}
-      {% elseif theme.baidushare %}
-        {% include '_partials/share/baidushare.swig' %}
-      {% elseif theme.add_this_id %}
-        {% include '_partials/share/add-this.swig' %}
-      {% elseif theme.duoshuo_shortname and theme.duoshuo_share %}
-        {% include '_partials/share/duoshuo_share.swig' %}
-      {% endif %}
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="Cloudsreal's Blogs" type="application/atom+xml">
+</head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Octopus</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
     </div>
   </div>
+</nav>
 
-{% endblock %}
+  
 
-{% block sidebar %}
-  {{ sidebar_template.render(true) }}
-{% endblock %}
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="数据结构复习"></span>
+          
+        </div>
 
-{% block script_extra %}
-  {% include '_scripts/pages/post-details.swig' %}
-{% endblock %}
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-12-24 17:34" pubdate>
+          2022年12月24日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.7k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          15 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">数据结构复习</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="chapter1"><a href="#chapter1" class="headerlink" title="chapter1"></a>chapter1</h2><h3 id="1-1-数据结构定义"><a href="#1-1-数据结构定义" class="headerlink" title="1.1 数据结构定义"></a>1.1 数据结构定义</h3><h3 id="1-2-数据的逻辑结构和物理结构"><a href="#1-2-数据的逻辑结构和物理结构" class="headerlink" title="1.2. 数据的逻辑结构和物理结构"></a>1.2. 数据的逻辑结构和物理结构</h3><ol>
+<li>数据的逻辑结构—–从用户视图看，是面向问题的。<br>数据的物理结构—–从具体实现视图看，是面向计算机的。<br>相关的操作及其实现。</li>
+</ol>
+<h3 id="1-3-面向对象的概念（不重要）"><a href="#1-3-面向对象的概念（不重要）" class="headerlink" title="1.3. 面向对象的概念（不重要）"></a>1.3. 面向对象的概念（不重要）</h3><ol>
+<li>OO:object-oriented＝object＋class＋inherit＋communicate</li>
+</ol>
+<h3 id="1-4-算法的概念"><a href="#1-4-算法的概念" class="headerlink" title="1.4. 算法的概念"></a>1.4. 算法的概念</h3><ol>
+<li>Input specified，Output specified，Definiteness，Effectiveness，Fitness（五个性质）</li>
+</ol>
+<h3 id="1-5-所有的排序算法（算法流程、复杂度）"><a href="#1-5-所有的排序算法（算法流程、复杂度）" class="headerlink" title="1.5. 所有的排序算法（算法流程、复杂度）"></a>1.5. 所有的排序算法（算法流程、复杂度）</h3><ol>
+<li>insertion sort</li>
+<li>rank sort</li>
+</ol>
+<h3 id="1-6-递归、分治、贪心的算法思想"><a href="#1-6-递归、分治、贪心的算法思想" class="headerlink" title="1.6. 递归、分治、贪心的算法思想"></a>1.6. <strong>递归</strong>、分治、贪心的算法思想</h3><h2 id="chapter2"><a href="#chapter2" class="headerlink" title="chapter2"></a>chapter2</h2><h3 id="2-1-时间复杂度、空间复杂度的概念："><a href="#2-1-时间复杂度、空间复杂度的概念：" class="headerlink" title="2.1. 时间复杂度、空间复杂度的概念："></a>2.1. 时间复杂度、空间复杂度的概念：</h3><ol>
+<li>the amount of memory a program needs to run to completion 运行完成程序所需要的内存空间</li>
+<li>the amount of time a program needs to run to completion 程序运行完成所需要的时间</li>
+<li>不考的概念：占哪些内存空间</li>
+<li>顺序查找算法<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">SequentialSearch</span><span class="hljs-params">( <span class="hljs-type">int</span> [] a , <span class="hljs-type">int</span> x )</span> &#123;   <br>    <span class="hljs-type">int</span> i;<br>    <span class="hljs-keyword">for</span>(i=<span class="hljs-number">0</span>; i&lt;a.length &amp;&amp;a[i]!=x; i++)   ; <br>    <span class="hljs-keyword">if</span>(i= = a.length) <span class="hljs-keyword">return</span> –<span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">return</span> i; <br>&#125;<br><span class="hljs-comment">/*</span><br><span class="hljs-comment">    Total data space:</span><br><span class="hljs-comment">    12 bytes :  x,i,a[i],0,-1,a.length</span><br><span class="hljs-comment">    each of   them cost 2 bytes</span><br><span class="hljs-comment">    S(n)=0</span><br><span class="hljs-comment">*/</span><br></code></pre></td></tr></table></figure></li>
+<li>具体度量不考</li>
+</ol>
+<h3 id="2-2-Time-Complexity"><a href="#2-2-Time-Complexity" class="headerlink" title="2.2 Time Complexity"></a>2.2 Time Complexity</h3><ol>
+<li><strong>大O表示法</strong>重点，尽量写Theta表示法的结果</li>
+<li>BinarySearch的过程和复杂度<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment">    Example 2: Binary Search</span><br><span class="hljs-comment">        0   1  2  3  4  5  6  7   8  </span><br><span class="hljs-comment">    a: -1  0  1  3  4  6  8  10  12    x = 6</span><br><span class="hljs-comment">*/</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">int</span> <span class="hljs-title function_">binarySearch</span><span class="hljs-params">(Comparable [] a, Comparable x)</span>&#123;   <br>    <span class="hljs-type">int</span> <span class="hljs-variable">low</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>, high = a.length - <span class="hljs-number">1</span>;<br>    <span class="hljs-keyword">while</span>( low &lt;= high )&#123;   <br>        <span class="hljs-type">int</span> <span class="hljs-variable">mid</span> <span class="hljs-operator">=</span> ( low + high ) / <span class="hljs-number">2</span>;<br>        <span class="hljs-keyword">if</span>(a[mid].compareTo(x) &lt; <span class="hljs-number">0</span>) <br>            low = mid + <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(a[mid].compareTo(x) &gt; <span class="hljs-number">0</span>) <br>            high = mid – <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">return</span> mid; <br>    &#125;<br>    <span class="hljs-keyword">return</span> NOT-FOUND; <br>&#125;<br><span class="hljs-comment">// 最好:一次       最坏:log2n     平均:O(log2n)</span><br></code></pre></td></tr></table></figure></li>
+<li>辗转相除的算法流程<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-type">long</span> <span class="hljs-title function_">gcd</span><span class="hljs-params">( <span class="hljs-type">long</span> m, <span class="hljs-type">long</span> n )</span>&#123;   <br>    <span class="hljs-keyword">while</span>( n != <span class="hljs-number">0</span> )&#123;    <br>        <span class="hljs-type">long</span> <span class="hljs-variable">rem</span> <span class="hljs-operator">=</span> m % n;<br>        m = n; <br>        n = rem;<br>    &#125; <br>    <span class="hljs-keyword">return</span> m;<br>&#125;<br><span class="hljs-comment">// O(log N)</span><br><br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="Chapter3"><a href="#Chapter3" class="headerlink" title="Chapter3"></a>Chapter3</h2><h3 id="3-1-ADT"><a href="#3-1-ADT" class="headerlink" title="3.1 ADT"></a>3.1 ADT</h3><ol>
+<li>stack：push、pop，peak</li>
+<li>单链表：带表头和不带表头</li>
+<li>双链表、循环链表一般不考</li>
+</ol>
+<h3 id="3-2-栈和队列"><a href="#3-2-栈和队列" class="headerlink" title="3.2 栈和队列"></a>3.2 栈和队列</h3><ol>
+<li>重要，看代码</li>
+</ol>
+<h2 id="Chapter4"><a href="#Chapter4" class="headerlink" title="Chapter4"></a>Chapter4</h2><h3 id="4-1-概念"><a href="#4-1-概念" class="headerlink" title="4.1 概念"></a>4.1 概念</h3><ol>
+<li>选择题小概念</li>
+</ol>
+<h3 id="4-2-表示方法"><a href="#4-2-表示方法" class="headerlink" title="4.2 表示方法"></a>4.2 表示方法</h3><h3 id="4-3-遍历（重点）"><a href="#4-3-遍历（重点）" class="headerlink" title="4.3 遍历（重点）"></a>4.3 遍历（重点）</h3><h3 id="4-4-String"><a href="#4-4-String" class="headerlink" title="4.4 String"></a>4.4 String</h3><h3 id="4-5-树的表示方法"><a href="#4-5-树的表示方法" class="headerlink" title="4.5 树的表示方法"></a>4.5 树的表示方法</h3><ol>
+<li>广义表不要求</li>
+<li>双亲表示：和并查集一起考</li>
+<li><strong>左子女右兄弟</strong></li>
+<li><strong>二叉树、森林、图的遍历</strong></li>
+</ol>
+<h3 id="4-6-线索化二叉树（常考）"><a href="#4-6-线索化二叉树（常考）" class="headerlink" title="4.6 线索化二叉树（常考）"></a>4.6 线索化二叉树（常考）</h3><h3 id="4-7-Huffman树"><a href="#4-7-Huffman树" class="headerlink" title="4.7 Huffman树"></a>4.7 Huffman树</h3><h3 id="4-8-搜索树"><a href="#4-8-搜索树" class="headerlink" title="4.8 搜索树"></a>4.8 搜索树</h3><ol>
+<li><strong>AVL树</strong></li>
+<li><strong>B树</strong>：不要求代码，要求画出B树及操作</li>
+<li>算法复杂度要求掌握</li>
+<li>算法流程</li>
+</ol>
+<h2 id="Chapter5"><a href="#Chapter5" class="headerlink" title="Chapter5"></a>Chapter5</h2><h3 id="5-1-散列函数"><a href="#5-1-散列函数" class="headerlink" title="5.1 散列函数"></a>5.1 散列函数</h3><ol>
+<li>只考取余</li>
+</ol>
+<h3 id="5-2-解决冲突"><a href="#5-2-解决冲突" class="headerlink" title="5.2 解决冲突"></a>5.2 解决冲突</h3><ol>
+<li>开放地址的线性探测（常考）</li>
+<li>二次探测：解决数据堆积</li>
+<li>双散列函数偶尔考</li>
+<li>分离链接和链表</li>
+</ol>
+<h2 id="Chapter6"><a href="#Chapter6" class="headerlink" title="Chapter6"></a>Chapter6</h2><h3 id="6-1-heap"><a href="#6-1-heap" class="headerlink" title="6.1 heap"></a>6.1 heap</h3><ol>
+<li>上滤、下滤、进堆、出堆的流程和复杂度</li>
+<li>线性时间建堆</li>
+<li>证明不要求</li>
+<li>掌握堆排序：不额外占用空间</li>
+</ol>
+<h2 id="Chapter7"><a href="#Chapter7" class="headerlink" title="Chapter7"></a>Chapter7</h2><h3 id="7-1-最小生成树"><a href="#7-1-最小生成树" class="headerlink" title="7.1 最小生成树"></a>7.1 最小生成树</h3><h3 id="7-2-算法和优化"><a href="#7-2-算法和优化" class="headerlink" title="7.2 算法和优化"></a>7.2 算法和优化</h3><h2 id="Chapter8"><a href="#Chapter8" class="headerlink" title="Chapter8"></a>Chapter8</h2><h3 id="8-1-概念选择填空"><a href="#8-1-概念选择填空" class="headerlink" title="8.1 概念选择填空"></a>8.1 概念选择填空</h3><ol>
+<li>生成树</li>
+<li>极大连通子图</li>
+</ol>
+<h3 id="8-2-图的表达方式"><a href="#8-2-图的表达方式" class="headerlink" title="8.2 图的表达方式"></a>8.2 图的表达方式</h3><ol>
+<li>邻接表跳过</li>
+</ol>
+<h3 id="8-3-最小生成树"><a href="#8-3-最小生成树" class="headerlink" title="8.3 最小生成树"></a>8.3 最小生成树</h3><h4 id="8-3-1-Prim"><a href="#8-3-1-Prim" class="headerlink" title="8.3.1 Prim"></a>8.3.1 Prim</h4><h4 id="8-3-2-Kruskal-对边进行排序，然后生成"><a href="#8-3-2-Kruskal-对边进行排序，然后生成" class="headerlink" title="8.3.2 Kruskal(对边进行排序，然后生成)"></a>8.3.2 Kruskal(对边进行排序，然后生成)</h4><h3 id="8-4-最短路径"><a href="#8-4-最短路径" class="headerlink" title="8.4 最短路径"></a>8.4 最短路径</h3><h3 id="8-5-活动网络（常考）"><a href="#8-5-活动网络（常考）" class="headerlink" title="8.5 活动网络（常考）"></a>8.5 活动网络（常考）</h3><ol>
+<li>AOV</li>
+<li>AOE</li>
+</ol>
+<h2 id="Chapter9"><a href="#Chapter9" class="headerlink" title="Chapter9"></a>Chapter9</h2><h3 id="9-1-快排（重点）"><a href="#9-1-快排（重点）" class="headerlink" title="9.1 快排（重点）"></a>9.1 快排（重点）</h3><h3 id="9-2-表格"><a href="#9-2-表格" class="headerlink" title="9.2 表格"></a>9.2 表格</h3><p><img src="/images/sort.png" srcset="/img/loading.gif" lazyload></p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/2022%E7%A7%8B%E5%AD%A3%E5%AD%A6%E6%9C%9F/">#2022秋季学期</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>数据结构复习</div>
+      <div>http://example.com/2022/12/24/data-structure-review/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>Cloudsreal</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年12月24日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/01/02/%E4%BA%92%E8%81%94%E7%BD%91%E5%AE%9E%E9%AA%8C/" title="互联网实验">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">互联网实验</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2022/10/29/The-Great-War/" title="The Great War">
+                        <span class="hidden-mobile">The Great War</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
