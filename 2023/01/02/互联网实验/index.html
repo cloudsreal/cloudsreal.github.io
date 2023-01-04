@@ -25,7 +25,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/%E5%AE%9E%E9%AA%8C%E6%8B%93%E6%89%91.png">
 <meta property="article:published_time" content="2023-01-02T06:50:32.000Z">
-<meta property="article:modified_time" content="2023-01-03T14:00:24.506Z">
+<meta property="article:modified_time" content="2023-01-04T07:01:49.638Z">
 <meta property="article:author" content="Cloudsreal">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="http://example.com/images/%E5%AE%9E%E9%AA%8C%E6%8B%93%E6%89%91.png">
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6.9k 字
+          7.5k 字
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          58 分钟
+          63 分钟
         
       </span>
     
@@ -468,6 +468,40 @@
 <p><strong>举例</strong></p>
 <p><img src="/images/ACLexample.png" srcset="/img/loading.gif" lazyload></p>
 <figure class="highlight x86asm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs x86asm"><span class="hljs-built_in">ip</span> access0list extended <span class="hljs-keyword">test</span> deny icmp <span class="hljs-number">192.168</span><span class="hljs-number">.1</span><span class="hljs-number">.254</span> <span class="hljs-number">0.0</span><span class="hljs-number">.0</span><span class="hljs-number">.255</span><br><span class="hljs-keyword">int</span> f0/<span class="hljs-number">0</span><br><span class="hljs-built_in">ip</span> access-group <span class="hljs-keyword">test</span> <span class="hljs-keyword">in</span><br></code></pre></td></tr></table></figure>
+
+<h2 id="考试记录"><a href="#考试记录" class="headerlink" title="考试记录"></a>考试记录</h2><p><strong>是否使用单臂路由</strong></p>
+<p>使用了，在router1配置了子接口，使vlan10和vlan20之间互通</p>
+<p><strong>有几个网段</strong></p>
+<p>我们用rip联通4个网段，router1有两个子接口，分别对应一个网关，一共两个网关。<br>六个，但是只有router1能看到六个<br>其他router只能看到四个</p>
+<ul>
+<li>网段：用来区分网路上的主机是否在同一网路区段内。在局域网中,每台电脑只能和自己同一网段的电脑互相通讯。</li>
+<li>网关：又叫协议转换器，是一种复杂的网络连接设备，可以支持不同协议之间的转换，实现不同协议网络之间的互连。</li>
+</ul>
+<p><strong>为什么设置环路</strong></p>
+<ol>
+<li>验证rip的唯一metric是跳数</li>
+<li>增加网络冗余</li>
+</ol>
+<p><strong>简述ACL</strong></p>
+<ul>
+<li>在Router1设置了扩展acl，使PC0不能ping到Router4，另一条路能走但不走，因为跳数多。</li>
+<li>验证：用主机0 （192.168.10.2）ping Router4（214.214.214.2），无法ping通证明ACL配置正确</li>
+</ul>
+<p><strong>简述动态路由</strong></p>
+<p>通过rip联通四个网段。</p>
+<p><strong>简述VLAN</strong></p>
+<ul>
+<li>两个vlan，vlan10和vlan20.</li>
+<li>vlan的帧封装格式：801.1q</li>
+</ul>
+<p><strong>配置NAT</strong></p>
+<ul>
+<li>在Router1配置静态NAT，将192.168网段映射到222.222网段，把f1&#x2F;0映射到s0&#x2F;0。</li>
+<li>验证：用Router2 ping 222.222.222.4（PC0），ping通证明NAT配置正确</li>
+</ul>
+<p><strong>用了什么技术</strong></p>
+<p>Router1静态映射成外部网段了，所以不需要192.168网段了。</p>
+<p>我们用了vlan，rip联通四个网段（已经不包括192.168），NAT映射，trunk，acl阻断</p>
 
                 
               </div>
