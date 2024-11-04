@@ -1,10 +1,7 @@
 ---
-title: ""
-excerpt: ""
+title: "Research"
+permalink: /research/
 author_profile: true
-redirect_from: 
-  - /research/
-  - /research.html
 ---
 
 {% if site.google_scholar_stats_use_cdn %}
