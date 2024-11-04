@@ -1,11 +1,7 @@
 ---
-permalink: /
-title: ""
-excerpt: ""
-author_profile: true
-redirect_from: 
-  - /research/
-  - /research.html
+title: "Research"
+permalink: /research/
+layout: default
 ---
 
 {% if site.google_scholar_stats_use_cdn %}

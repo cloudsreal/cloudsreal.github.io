@@ -1,9 +1,9 @@
 # main links links
 main:
 
-  # - title: "News"
-  #   url: "/#-news"
-
+  - title: "Home"
+    url: "/"
+    
   - title: "Research"
     url: "/#-research"
 
@@ -15,6 +15,7 @@ main:
 
   - title: "About Me"
     url: "/#about-me"
+
 
   # - title: "Honors and Awards"
     # url: "/#-honors-and-awards"
