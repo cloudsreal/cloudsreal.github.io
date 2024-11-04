@@ -7,7 +7,7 @@
 
 # Site Settings
 title                    : "Yujin Zhang"
-description              : "The best people in life are free"
+description              : "The best people in life are free."
 repository               : "cloudsreal/cloudsreal.github.io"
 google_scholar_stats_use_cdn : true
 
@@ -22,13 +22,13 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 # Site Author
 author:
   name             : "Yujin Zhang"
-  avatar           : "images/android-chrome-512x512.png"
+  avatar           : "images/avatar.png"
   bio              : "Nanjing University"
   location         : "Nanjing, China"
   employer         :
   pubmed           : 
   googlescholar    : "https://scholar.google.com/citations?user=YOUR_GOOGLE_SCHOLAR_ID"
-  email            : "yujinz@gmail.com"
+  email            : "yujinz0381@gmail.com"
   researchgate     :  # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
