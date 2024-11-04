@@ -17,11 +17,13 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-📖 Hi! I’m a fourth-year undergraduate at Nanjing University, China, majoring in Software Engineering. I am currently applying for Ph.D. programs.
+🐙 Hi, I’m Yujin! Click [here](https://hearmyname.net/say/cmn-cn/Yujin) to hear my name. My name sounds similar to the word "octopus" in Chinese, so my friends love using this emoji to represent me.
+
+📖 I'm a fourth-year undergraduate at Nanjing University, China, majoring in Software Engineering. I am currently applying for Ph.D. programs.
 
 🥰 My research interest lies in Human-Computer Interaction and End-User Software Engineering. I am curious about integrating machine learning technologies into my system to support non-technical users. I hope to make complex tasks more accessible and effective!
 
-✨ I'm fortunate to work with Prof.[Haojian Jin](https://www.haojianj.in/) at University of California San Diego and Prof.[Zhiqiang Zuo](https://z-zhiqiang.github.io/) at Nanjing University.
+💡  I'm fortunate to work with Prof.[Haojian Jin](https://www.haojianj.in/) at University of California San Diego and Prof.[Zhiqiang Zuo](https://z-zhiqiang.github.io/) at Nanjing University.
 
 🩵 In my spare time, I enjoy watching series and documentaries. I’m a K-pop fan and I'm learning hip-hop dancing now!
 
@@ -29,7 +31,7 @@ redirect_from:
 <!-- - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 
-# 📝 Publication
+# Publication
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -43,14 +45,14 @@ redirect_from:
 </div>
 </div> -->
 
-# 💡 Research
+# Research
 <!-- # 🎖 Honors and Awards
 - *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
 - *2024.3 - Present*: 
 - *2023.8 - 2024.8*:
 
-# 🪪 Education
+# Education
 - *2021.09 - 2025.06*, Software Engineering, Nanjing University, China.
 
 <!-- # 💻 Internships -->
