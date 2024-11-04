@@ -3,25 +3,27 @@ main:
 
   - title: "Home"
     url: "/"
-  
-  - title: "Research"
-    url: "/research/"
 
   - title: "Publication"
-    url: "/#-publications"
+    url: "/#-publication"
 
-  - title: "CV"
-    url: "/#-cv"
+  - title: "Research"
+    url: "/#-research/"
 
-  - title: "About Me"
-    url: "/#about-me"
+
+
+  # - title: "CV"
+  #   url: "/#-cv"
+
+  # - title: "About Me"
+  #   url: "/#about-me"
 
 
   # - title: "Honors and Awards"
     # url: "/#-honors-and-awards"
 
-  # - title: "Educations"
-    # url: "/#-educations"
+  - title: "Education"
+    url: "/#-education"
 
   # - title: "Invited Talks"
     # url: "/#-invited-talks"
