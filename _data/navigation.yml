@@ -1,8 +1,8 @@
 # main links links
 main:
 
-  - title: "Home"
-    url: "/"
+  - title: "About Me"
+    url: "/#about-me"
 
   - title: "Publication"
     url: "/#-publication"
