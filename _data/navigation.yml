@@ -8,9 +8,7 @@ main:
     url: "/#-publication"
 
   - title: "Research"
-    url: "/#-research/"
-
-
+    url: "/#-research"
 
   # - title: "CV"
   #   url: "/#-cv"
