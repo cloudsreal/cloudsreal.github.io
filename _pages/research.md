@@ -2,6 +2,9 @@
 title: "Research"
 permalink: /research/
 author_profile: true
+redirect_from: 
+  - /research/
+  - /research.html
 ---
 
 {% if site.google_scholar_stats_use_cdn %}
@@ -11,7 +14,7 @@ author_profile: true
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='research'></span>
+<!-- <span class='anchor' id='research'></span> -->
 
 ## 2024.3 - Present 
 
