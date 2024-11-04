@@ -4,8 +4,8 @@ title: ""
 excerpt: ""
 author_profile: true
 redirect_from: 
-  - /about/
-  - /about.html
+  - /research/
+  - /research.html
 ---
 
 {% if site.google_scholar_stats_use_cdn %}
@@ -15,21 +15,12 @@ redirect_from:
 {% endif %}
 {% assign url = gsDataBaseUrl | append: "google-scholar-stats/gs_data_shieldsio.json" %}
 
-<span class='anchor' id='about-me'></span>
+## 2024.3 - Present 
 
-📖 Hi! I’m a fourth-year undergraduate at Nanjing University, China, majoring in Software Engineering. I am currently applying for Ph.D. programs.
 
-🥰 My research interest lies in Human-Computer Interaction and End-User Software Engineering. I am curious about integrating machine learning technologies into my system to support non-technical users. I hope to make complex tasks more accessible and effective!
 
-✨ I'm fortunate to work with Prof.[Haojian Jin](https://www.haojianj.in/) at University of California San Diego and Prof.[Zhiqiang Zuo](https://z-zhiqiang.github.io/) at Nanjing University. 
+##  2023.9 - 2024.8
 
-🩵 In my spare time, I enjoy watching series and documentaries. I’m a K-pop fan and I'm learning hip-hop dancing now!
-
-<!-- # 🔥 News -->
-<!-- - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
-- *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
-
-# 📝 Publications 
 
 <!-- <div class='paper-box'><div class='paper-box-image'><div><div class="badge">CVPR 2016</div><img src='images/500x300.png' alt="sym" width="100%"></div></div>
 <div class='paper-box-text' markdown="1">
@@ -47,9 +38,3 @@ redirect_from:
 <!-- # 🎖 Honors and Awards
 - *2021.10* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
 - *2021.09* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet.  -->
-
-# 📖 Educations
-- *2021.09 - 2025.06*, Bachelor of Software Engineering, Nanjing University, China.
-
-<!-- # 💻 Internships -->
-<!-- - *2019.05 - 2020.02*, [Lorem](https://github.com/), China. -->
