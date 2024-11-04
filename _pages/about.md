@@ -61,9 +61,6 @@ redirect_from:
 
 - *2023.09*, Nitori International Scholarship, Nanjing University (Top 5%) 
 - *2022.09*, Tencent Scholarship, Nanjing University (Top 3%) 
-<!-- - *2020.11*, Second Prize in National High School’s Mathematics Competition of China
-- *2018.11*, First Prize in National Olympiad in Informatics in Provinces -->
-  
 
 # Education
 - *2021.09 - 2025.06*, Software Institute, Nanjing University, China.

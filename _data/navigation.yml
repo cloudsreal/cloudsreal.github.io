@@ -4,8 +4,8 @@ main:
   - title: "About Me"
     url: "/#about-me"
 
-  - title: "Publication"
-    url: "/#publication"
+  # - title: "Publication"
+  #   url: "/#publication"
 
   - title: "Research"
     url: "/#research"
