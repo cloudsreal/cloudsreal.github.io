@@ -17,8 +17,8 @@ main:
   #   url: "/#about-me"
 
 
-  # - title: "Honors and Awards"
-    # url: "/#-honors-and-awards"
+  - title: "Honors and Awards"
+    url: "/#honors-and-awards"
 
   - title: "Education"
     url: "/#education"
