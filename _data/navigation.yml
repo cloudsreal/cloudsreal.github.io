@@ -5,10 +5,10 @@ main:
     url: "/#about-me"
 
   - title: "Publication"
-    url: "/#-publication"
+    url: "/#publication"
 
   - title: "Research"
-    url: "/#-research"
+    url: "/#research"
 
   # - title: "CV"
   #   url: "/#-cv"
@@ -21,7 +21,7 @@ main:
     # url: "/#-honors-and-awards"
 
   - title: "Education"
-    url: "/#-education"
+    url: "/#education"
 
   # - title: "Invited Talks"
     # url: "/#-invited-talks"
