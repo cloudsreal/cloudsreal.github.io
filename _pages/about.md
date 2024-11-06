@@ -48,9 +48,9 @@ redirect_from:
 # Research
 
 
-- *[In Submission] Trust Label Design for Open Source Software*
+<!-- - *[In Submission] Trust Label Design for Open Source Software* -->
   
-  Tony W. Li, Yunpeng Zhao, **Yujin Zhang**, R. Stuart Geiger, and Haojian Jin
+  <!-- Tony W. Li, Yunpeng Zhao, **Yujin Zhang**, R. Stuart Geiger, and Haojian Jin -->
 
 - *[Manuscript] Scaling Inter-procedural Dataflow Analysis on the Cloud*
   
