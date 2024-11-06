@@ -10,6 +10,9 @@ main:
   - title: "Research"
     url: "/#research"
 
+  - title: "CV"
+    url: "https://drive.google.com/file/d/1uKRY4D4so8l-VAjxF1zm1bl4MRFom2sd/view?usp=sharing"
+
   # - title: "CV"
   #   url: "/#-cv"
 
