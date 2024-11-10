@@ -25,7 +25,7 @@ redirect_from:
 
 💡  I'm fortunate to work with Prof.[Haojian Jin](https://www.haojianj.in/) at University of California San Diego and Prof.[Zhiqiang Zuo](https://z-zhiqiang.github.io/) at Nanjing University.
 
-🩵 In my spare time, I enjoy watching series and documentaries. I’m a K-pop fan and I'm learning hip-hop dancing now!
+🩵 In my spare time, I love watching series and documentaries. I'm learning hip-hop dancing now!
 
 <!-- # 🔥 News -->
 <!-- - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
