@@ -11,7 +11,7 @@ main:
     url: "/#research"
 
   - title: "CV"
-    url: "/_pages/yujin_CV.pdf"
+    url: "/_pages/CV.pdf"
 
   # - title: "CV"
   #   url: "/#-cv"
