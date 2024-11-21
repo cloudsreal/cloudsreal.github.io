@@ -21,7 +21,7 @@ redirect_from:
 
 📖 I'm a fourth-year undergraduate at Nanjing University, China, majoring in Software Engineering. I am currently applying for Ph.D. programs.
 
-🥰 My research interest lies in Human-Computer Interaction and End-User Software Engineering. I am curious about exploring the design space of human-centered tools and integrating new techniques into programming to support end users. I hope to make complex tasks more accessible and efficient, and enable people to do more creative activities!
+🥰 My research interest lies in Human-Computer Interaction and End-User Software Engineering. I enjoy working on exploring the design space of human-centered tools and integrating new techniques into programming to support end users. I hope to make complex tasks more accessible and efficient, and enable people to do more creative activities!
 
 💡 I'm fortunate to work with Prof. [Haojian Jin](https://www.haojianj.in/) at University of California San Diego and Prof. [Zhiqiang Zuo](https://z-zhiqiang.github.io/) at Nanjing University.
 
