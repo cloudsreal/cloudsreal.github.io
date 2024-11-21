@@ -17,15 +17,15 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-🐙 Hi, I’m Yujin! Click [here](https://hearmyname.net/say/cmn-cn/Yujin) to hear my name. My name sounds similar to the word "octopus" in Chinese, so my friends love using this emoji to represent me.
+🐙 Hi, I'm Yujin! Click [here](https://hearmyname.net/say/cmn-cn/Yujin) to hear my name. My name sounds similar to the word "octopus" in Chinese, so my friends love using this emoji to represent me.
 
 📖 I'm a fourth-year undergraduate at Nanjing University, China, majoring in Software Engineering. I am currently applying for Ph.D. programs.
 
-🥰 My research interest lies in Human-Computer Interaction and End-User Software Engineering. I am curious about understanding human interation with technology and integrating state-of-art innovations into system to support non-technical users. I hope to make complex tasks more accessible and efficient, and help people do more creative activities!
+🥰 My research interest lies in Human-Computer Interaction and End-User Software Engineering. I am curious about the design space in human-centered tools and integrating innovations into system to support end users. I hope to make complex tasks more accessible and efficient, and enable people to do more creative activities!
 
-💡  I'm fortunate to work with Prof.[Haojian Jin](https://www.haojianj.in/) at University of California San Diego and Prof.[Zhiqiang Zuo](https://z-zhiqiang.github.io/) at Nanjing University.
+💡 I'm fortunate to work with Prof.[Haojian Jin](https://www.haojianj.in/) at University of California San Diego and Prof.[Zhiqiang Zuo](https://z-zhiqiang.github.io/) at Nanjing University.
 
-🩵 In my spare time, I love watching series and documentaries. I'm learning hip-hop dancing now!
+🩵 I love photograph and I hope to film my life. I'm also learning hiphop dancing now!
 
 <!-- # 🔥 News -->
 <!-- - *2022.02*: &nbsp;🎉🎉 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ornare aliquet ipsum, ac tempus justo dapibus sit amet. 
