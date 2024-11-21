@@ -23,7 +23,7 @@ redirect_from:
 
 🥰 My research interest lies in Human-Computer Interaction and End-User Software Engineering. I am curious about the design space in human-centered tools and integrating innovations into system to support end users. I hope to make complex tasks more accessible and efficient, and enable people to do more creative activities!
 
-💡 I'm fortunate to work with Prof.[Haojian Jin](https://www.haojianj.in/) at University of California San Diego and Prof.[Zhiqiang Zuo](https://z-zhiqiang.github.io/) at Nanjing University.
+💡 I'm fortunate to work with Prof. [Haojian Jin](https://www.haojianj.in/) at University of California San Diego and Prof. [Zhiqiang Zuo](https://z-zhiqiang.github.io/) at Nanjing University.
 
 🩵 I love photograph and I hope to film my life. I'm also learning hiphop dancing now!
 
