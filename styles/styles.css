@@ -1,0 +1,793 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: #2c3e50; */
+}
+
+:root {
+    --font-body: 'Source Serif 4', 'Noto Serif', serif;
+    --font-heading: 'EB Garamond', 'Source Serif 4', serif;
+    --font-sans: 'Work Sans', 'Noto Sans', sans-serif;
+
+    --color-text: #2C2E35;
+    --color-text-secondary: #6B7280;
+    --color-accent: #5B7FA6;
+    --color-accent-hover: #7BA3C8;
+}
+
+body {
+    font-family: var(--font-body);
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    min-height: 100vh; /* allow footer to sit at the bottom */
+    background: var(--color-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 65%;
+    margin: 0 auto;
+}
+
+
+/* ===== Refined Sticky Header Layout ===== */
+
+/* Top banner removed: hide hero-image if present */
+.hero-image {
+  display: none;
+}
+
+/* 顶部标题+导航栏，宽度与正文一致 */
+.header-row {
+  position: sticky;
+  top: 0; /* no top banner: stick to viewport top */
+  z-index: 9;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+
+  width: 100%;
+  margin: 0 auto;
+  padding: 0px 0 6px 0;
+
+  backdrop-filter: blur(4px);
+}
+
+/* 标题左对齐 */
+.header-row h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 1.6em;
+  color: var(--color-text);
+  text-align: left;
+  letter-spacing: 0.01em;
+}
+
+/* 导航栏靠右 */
+.inline-navbar {
+  display: flex;
+  gap: 24px;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 0;
+  margin-bottom: 0; /* 紧贴顶部 */
+}
+
+.inline-navbar a {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--color-text);
+  padding: 5px 0; /* remove horizontal inset so text aligns with content */
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  letter-spacing: 0.02em;
+}
+
+.inline-navbar a:hover {
+  color: var(--color-accent);
+  background-color: transparent;
+}
+
+.inline-navbar a.active {
+  color: var(--color-accent);
+  font-weight: 600;
+  background-color: transparent;
+}
+
+/* 响应式布局调整 */
+@media (max-width: 768px) {
+  .header-row {
+      flex-direction: column;
+      align-items: flex-start;
+      top: 0;
+      padding: 6px 20px;
+    }
+
+  .inline-navbar {
+    justify-content: flex-start;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .inline-navbar a {
+    font-size: 0.95rem;
+  }
+}
+
+
+
+.container {
+    flex: 1; /* stretch to push footer down */
+    width: 100%;
+    margin: 0 auto;
+    padding: 40px;
+    /* padding-top: 90px; */
+    background: var(--color-bg);
+    border-radius: 0 0 15px 15px;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); */
+}
+
+/* Profile Section */
+.profile-section {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 60px;
+    margin-top: 0;
+}
+
+.profile-left {
+    flex: 0 0 200px;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.profile-photo-container {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background: transparent;
+  box-shadow: none;
+}
+
+.profile-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+.profile-name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.9em;
+  color: var(--color-text);
+  margin: 6px 0 6px;
+  letter-spacing: 0.01em;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    width: 200px;
+}
+
+.social-links a {
+    color: var(--color-text);
+    font-size: 0.9em;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: 180px;
+    justify-content: center;
+}
+
+.social-links a i {
+    font-size: 1.1em;
+    width: 20px;
+    text-align: center;
+    /* color: #2c3e50; */
+}
+
+.social-links a:hover {
+    color: #2c3e50;
+    transform: translateX(3px);
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.profile-right {
+    flex: 1;
+}
+
+
+.container h2 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--color-text);
+    margin: 0 0 0 0;
+}
+/* Typography */
+h1 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 2.5em;
+    color: var(--color-text);
+    margin-bottom: 30px;
+    letter-spacing: 0.01em;
+}
+
+h2 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1.8em;
+    color: var(--color-text);
+    margin: 30px 0 15px;
+    letter-spacing: 0.01em;
+}
+
+
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--color-text);
+    margin: 30px 0 15px;
+    letter-spacing: 0.01em;
+}
+
+
+p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.95em;
+    color: var(--color-text);
+    text-justify: inter-word;
+}
+
+
+.intro-text {
+    margin-bottom: 40px;
+    font-family: var(--font-body);
+}
+
+.chinese-intro {
+    font-family: var(--font-body);
+    font-size: 1.2em;
+    color: var(--color-text-secondary);
+    margin-bottom: 15px;
+}
+
+.english-intro {
+    font-family: var(--font-body);
+    font-size: 1.1em;
+    color: var(--color-text-secondary);
+    margin-bottom: 30px;
+}
+
+.content-section {
+    padding-top: 20px;
+}
+.content-section h2 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1.8em;
+    color: var(--color-text);
+    margin: 40px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: none;
+}
+
+.content-section h2:first-child {
+    margin-top: 0;
+}
+
+.content-section h3 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--color-text);
+    margin: 40px 0 20px;
+    /* padding-top: 20px; */
+    padding-bottom: 10px;
+    border-bottom: none;
+}
+
+.content-section h3:first-child {
+    margin-top: 0;
+}
+
+
+.content-section p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--color-text);
+    font-size: 0.95em;
+    line-height: 1.6;
+    text-justify: inter-word;
+}
+
+.education-item {
+  margin-bottom: 1.5rem;
+}
+
+.edu-degree {
+  font-size: 0.95em;
+  margin-bottom: 2px;
+}
+
+.edu-school {
+  font-size: 0.9em;
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+}
+
+.edu-note {
+  font-size: 0.9em;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+
+.research-item {
+    margin-bottom: 30px;
+    padding-left: 15px;
+    border-left: 3px solid #eee;
+}
+
+.research-item h3 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1.3em;
+    color: var(--color-text);
+    margin: 0 0 10px;
+}
+
+.news-item {
+    margin-bottom: 20px;
+    padding-left: 15px;
+    border-left: 3px solid #eee;
+}
+
+/* ===== News Section Formatting ===== */
+.news-list p {
+    margin-bottom: 8px;
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--color-text);
+    font-size: 0.95em;
+    line-height: 1.6;
+  }
+  
+  .news-list strong {
+    color: var(--color-accent);
+  }
+
+.date {
+    display: block;
+    font-size: 0.9em;
+    color: var(--color-text-secondary);
+    margin-bottom: 5px;
+}
+
+.content-section p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--color-text);
+    font-size: 0.95em; /* Reduced font size */
+    line-height: 1.6;
+}
+
+
+.photo-credit {
+    font-size: 0.8em;
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+    /* font-style: italic; */
+    text-align: left;
+    align-self: flex-start;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .container {
+        padding: 20px;
+    }
+    
+    .profile-section {
+        gap: 40px;
+    }
+    
+    .profile-left {
+        flex: 0 0 250px;
+    }
+    
+    .profile-photo-container {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .profile-right {
+        width: 100%;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .social-links {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-left {
+        flex: 0 0 200px;
+    }
+    
+    .profile-photo-container {
+        width: 200px;
+        height: 200px;
+    }
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+}
+
+
+/* 设置默认链接颜色 */
+a {
+    color: var(--color-accent); /* 深蓝 */
+    text-decoration: none; /* 去除下划线 */
+    transition: color 0.3s ease; /* 添加颜色过渡效果 */
+}
+
+/* 设置鼠标悬停时链接的颜色 */
+a:hover {
+    color: var(--color-accent-hover); /* 浅蓝 */
+    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+}
+
+/* Emphasized link (e.g., advisor) */
+.em-link {
+    color: #026b6b;
+    /* font-weight: 500; */
+}
+.em-link:hover {
+    color: #014f4f;
+    text-decoration: underline;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* push to bottom when content is short */
+    color: var(--color-text-secondary);
+    font-size: 0.85em;
+    font-family: var(--font-body);
+}
+
+@media (max-width: 480px) {
+    .footer {
+        margin-top: 30px;
+        padding: 15px 0;
+        font-size: 0.8em;
+    }
+}
+
+/* ===== FORCE full-width mobile layout + safe-area handling =====
+   Paste this at the very end of styles.css so it overrides earlier rules.
+*/
+@media (max-width: 768px) {
+    /* ensure html/body occupy full height and remove any default margins */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      -webkit-text-size-adjust: 100%;
+      background-color: var(--color-bg);
+      overflow-x: hidden; /* avoid horizontal scroll */
+    }
+  
+    /* Make hero and container full width (override desktop 65% width) */
+    .hero {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background: transparent;
+      border-radius: 0 !important;
+    }
+  
+    /* hero image should fill full width and keep height reasonable */
+    .hero-image {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: 140px !important;
+      margin: 0;
+      background-size: cover !important;
+      background-position: center !important;
+      border-radius: 0 !important;
+    }
+  
+    /* container becomes edge-to-edge, but keep small inner padding for readability */
+    .container {
+      width: 100% !important;
+      max-width: 100% !important;
+      margin: 0 auto !important;
+      padding: 16px !important; /* adjust as desired */
+      background: var(--color-bg);
+      border-radius: 0 !important;
+      box-shadow: none !important;
+    }
+  
+    /* header / navbar stacked and centered */
+    .header-row {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      justify-content: flex-start !important;
+      gap: 0.5rem;
+      margin: 5px 0 10px 0 !important;
+      padding: 0;
+    }
+  
+    .header-row h2 {
+      width: 100%;
+      text-align: left;          /* left or center as you prefer */
+      padding-left: 4px;
+      font-size: 2rem;
+      margin: 0;
+    }
+  
+    /* Put navbar below hero/title and center it */
+    .inline-navbar {
+      width: auto;
+      display: flex !important;
+      justify-content: flex-start !important;
+      gap: 12px;
+      flex-wrap: wrap;
+      padding: 6px 0;
+      margin: 0 0 8px 0 !important;
+    }
+  
+    .inline-navbar a {
+      font-size: 0.98rem;
+      padding: 6px 8px;
+    }
+  
+    /* Profile area stacks vertically */
+    .profile-section {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 15px !important;
+      padding-top: 5px !important;
+    }
+  
+    .profile-left, .profile-right {
+      width: 100% !important;
+    }
+  
+    /* avatar smaller and centered */
+    .profile-photo-container {
+      width: 180px !important;
+      height: 180px !important;
+      margin: 0 auto 8px auto !important;
+    }
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  
+    /* make social links full width center-aligned */
+    .social-links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+      margin-top: 6px;
+    }
+    .social-links a {
+      width: auto;
+      justify-content: center;
+      padding-left: 0;
+    }
+  
+    /* content paragraphs: readable padding and justify */
+    .content-section, .content-section p {
+      padding: 0 4px !important;
+      text-align: justify;
+      text-justify: inter-word;
+      line-height: 1.7;
+    }
+  
+    /* footer full-width and compact */
+    .footer {
+      width: 100% !important;
+      padding: 12px 8px !important;
+      margin-top: 18px !important;
+    }
+  
+    /* handle iPhone safe-area insets (optional, makes content not touch rounded corners) */
+    .container, .hero-image, .footer {
+      padding-left: max(16px, env(safe-area-inset-left)) !important;
+      padding-right: max(16px, env(safe-area-inset-right)) !important;
+    }
+  }
+  
+
+/* ===== Timeline ===== */
+.timeline {
+  margin-top: 0.5rem;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 0.75rem;
+  align-items: baseline;
+}
+
+.timeline-date {
+  flex: 0 0 5.5rem;
+  font-size: 0.85em;
+  color: var(--color-accent);
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+.timeline-content {
+  font-size: 0.95em;
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.6;
+}
+
+/* ===== Blog/Blog ===== */
+.blog-list {
+  margin-top: 0.5rem;
+}
+
+.blog-item {
+  display: flex;
+  gap: 1.2rem;
+  margin-bottom: 1.5rem;
+  align-items: baseline;
+}
+
+.blog-date {
+  flex: 0 0 5.5rem;
+  font-size: 0.85em;
+  color: var(--color-text-secondary);
+  font-family: var(--font-body);
+  white-space: nowrap;
+}
+
+.blog-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  margin-bottom: 2px;
+}
+
+.blog-excerpt {
+  font-size: 0.9em;
+  color: var(--color-text-secondary);
+  margin-bottom: 0;
+}
+
+/* ===== Papers Section ===== */
+.papers-year-group {
+  margin-bottom: 2rem;
+}
+
+.papers-year {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.papers-section {
+    margin-top: 2rem;
+  }
+  
+  .papers-section h3 {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    color: var(--color-text);
+    /* margin-bottom: 1rem; */
+    border-bottom: none;
+    /* padding-bottom: 0.4rem; */
+  }
+  
+  .paper {
+    margin-bottom: 1.5rem;
+  }
+  
+  .paper-title {
+    font-family: var(--font-heading);
+    font-weight: 500;
+    font-size: 1rem;
+    /* margin-bottom: 0.3rem; */
+    color: var(--color-text);
+  }
+  
+  .paper-authors {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: var(--color-text);
+    margin: 0;
+  }
+  
+  .paper-venue {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin: 0.2rem 0;
+  }
+  
+  .paper-links a {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    text-decoration: none;
+    margin-right: 0.6rem;
+  }
+  
+  .paper-links a:hover {
+    text-decoration: underline;
+  }
+  
