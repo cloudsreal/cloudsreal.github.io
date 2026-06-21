@@ -10,8 +10,9 @@
   --color-heading: #2C2E35;
   --color-text: #4f535f;
   --color-text-secondary: #6B7280;
-  --color-accent: #5B7FA6;
-  --color-accent-hover: #7BA3C8;
+  --color-accent: #436f9b;
+  --color-accent-hover: #2f5d8a;
+  --color-link-soft: #4f7194;
   --color-muted: var(--color-text-secondary);
   --color-faint: var(--color-text-secondary);
   --color-line: #e5e7eb;
@@ -62,6 +63,21 @@ body {
   font-weight: 500;
   letter-spacing: 0;
   line-height: 1.2;
+}
+
+.site-email {
+  display: inline-block;
+  margin-top: 7px;
+  color: var(--color-accent);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.site-email:hover {
+  color: var(--color-accent-hover);
+  text-decoration: none;
 }
 
 .inline-navbar {
@@ -140,22 +156,61 @@ strong {
   font-weight: 500;
 }
 
-.contact-links {
-  margin-top: 4px;
-  color: var(--color-text);
+.profile-meta {
+  margin-top: 6px;
+}
+
+.quick-links,
+.research-tags {
+  margin-bottom: 10px;
+}
+
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+}
+
+.quick-links a {
+  display: inline-block;
+  color: var(--color-link-soft);
+  font-size: 0.95rem;
+  font-weight: 300;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.research-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  color: var(--color-text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.research-tags span {
+  display: inline-block;
+  transition: color 160ms ease, transform 160ms ease;
+}
+
+.quick-links a:hover,
+.research-tags span:hover {
+  color: var(--color-accent-hover);
+  transform: translateY(-1px);
 }
 
 a {
-  color: var(--color-accent);
-  text-decoration: none;
+  color: var(--color-link-soft);
+  font-weight: 300;
+  text-decoration: underline;
+  text-decoration-color: rgba(111, 135, 159, 0.42);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
 }
 
 a:hover {
-  color: var(--color-accent-hover);
-  text-decoration: underline;
-  text-decoration-color: var(--color-accent-hover);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 3px;
+  color: var(--color-accent);
+  text-decoration-color: currentColor;
 }
 
 h1,
